@@ -68,7 +68,7 @@ module.exports = {
               var findings = message.embeds[0].description;
               //console.log(message.embeds);//
               try{
-                  if(findings.includes('You caught a **'+pokemon+'**')){
+                  if(findings.includes('You caught a **'+pokemon+'**')||findings.includes('You caught an **'+pokemon+'**')||findings.includes('You caught a :sparklesShiny: **'+pokemon+'**')){
                       //function here
                       console.log(findings);
                       pokemon = 'wala';
