@@ -1,6 +1,7 @@
 module.exports = {
     name: 'mute',
     description: 'Mute channel',
+    usage:'mute',
     guildOnly: true,
     roleLock:true,
     execute(message, args){

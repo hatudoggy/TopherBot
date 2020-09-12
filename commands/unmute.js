@@ -1,6 +1,7 @@
 module.exports = {
     name: 'unmute',
     description: 'Unmute channel',
+    usage:'unmute',
     guildOnly: true,
     roleLock:true,
     execute(message, args){

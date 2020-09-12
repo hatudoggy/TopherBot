@@ -1,6 +1,7 @@
 module.exports = {
     name: 'pbb',
     description: 'bahay ni kuya',
+    usage:'pbb invite {username}, pbb kick {username}',
     guildOnly: true,
     execute(message, args, client){
         if(args[0] == 'invite'){

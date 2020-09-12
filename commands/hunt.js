@@ -13,6 +13,7 @@ var huntStart = false;
 module.exports = {
     name: 'hunt',
     description: 'Pokemon hunt event',
+    usage:'hunt set {pokemon_name, random or randomL}, hunt start, hunt end',
     guildOnly: true,
     roleLock:true,
     execute(message, args, client){
