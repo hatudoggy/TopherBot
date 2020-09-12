@@ -78,10 +78,11 @@ module.exports = {
                           return sentenceArray.filter(sentence => sentence.includes(word));
                       }
                       let msg = getSentence('wild',para).toString();
-                      let name = msg.split(/(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s/g).map(w => w.split(/((\b[^\s]+\b)((?<=\.\w).)?)/g)[1]);
+                      console.log(msg);
+                      let name = msg.replace(/ .*/,'');
                       console.log(name);
                       pokeHuntOff();
-                      client.channels.cache.get(announceChannel).send(roleMention+' Si **'+name+'** nanalo sa hunt!🎉🎉');
+                      client.channels.cache.get(announceChannel).send(roleMention+' Si '+name+' nanalo sa hunt!🎉🎉');
                       console.log('May nanalo na sa hunt');
                       /*
                       for (let i = 0; i < pokeServer.length; i++){
