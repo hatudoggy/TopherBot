@@ -6,7 +6,7 @@ module.exports = {
         if(args[0] == 'invite'){
             if(args[1]){
                 try{
-                let role = message.guild.roles.cache.find(role=>role.name=='Hypebeast');
+                let role = message.guild.roles.cache.find(role=>role.name=='PinoyHousemate');
                 //let member = message.mentions.members.first();
                 let member = message.guild.members.cache.find(user=>user.user.username==args[1]);
                 member.roles.add(role);
@@ -22,7 +22,7 @@ module.exports = {
         }else if(args[0] == 'kick'){
             if(args[1]){
                 try{
-                    let role = message.guild.roles.cache.find(role=>role.name=='Hypebeast');
+                    let role = message.guild.roles.cache.find(role=>role.name=='PinoyHousemate');
                     //let member = message.mentions.members.first();
                     let member = message.guild.members.cache.find(user=>user.user.username==args[1]);
                     member.roles.remove(role);
