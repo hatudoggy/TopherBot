@@ -13,7 +13,7 @@ module.exports = {
             const help = new Discord.MessageEmbed()
                 .setColor('#0099ff')
                 .setTitle('Listahan ng commands ni TopherBot')
-                .setDescription('Type `_help command_name` para wala lang')
+                .setDescription('Type `-help command_name` para wala lang')
                 .addField('Commands', data)
                 .setFooter('TopherBot');
 
@@ -29,7 +29,7 @@ module.exports = {
 
             const helpCommand = new Discord.MessageEmbed()
                 .setColor('#0099ff')
-                .setTitle(command.name+' Command')
+                .setTitle(command.name+' command')
                 .setDescription('**Description**: '+command.description+'\n**Aliases**: '+command.aliases+'\n**Usage**: '+command.usage)
                 .setFooter('TopherBot');
 
