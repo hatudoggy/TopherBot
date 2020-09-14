@@ -69,21 +69,16 @@ module.exports = {
               var findings = message.embeds[0].description;
               //console.log(message.embeds);//
               try{
-                  if(findings.includes('You caught a **'+pokemon+'**')||findings.includes('You caught an **'+pokemon+'**')||findings.includes('You caught a :sparklesShiny: **'+pokemon+'**')){
+                  if(findings.includes('**'+pokemon+'** with')){
                       //function here
                       console.log(findings);
                       pokemon = 'wala';
-                      let para = message.content;
-                      getSentence = (word, text)=>{
-                          let sentenceArray = text.replace(/([.?!])\s*(?=[A-Z])/g, "$1|").split("|");
-                          return sentenceArray.filter(sentence => sentence.includes(word));
-                      }
-                      let msg = getSentence('wild',para).toString();
+                      let msg = message.embeds[0].author.name.replace(/[,!]/g,"").replace(/\s{2,}/g," ");
                       console.log(msg);
-                      let name = msg.replace(/ .*/,'');
+                      let name = msg.split(" ").splice(-1)[0].toString();
                       console.log(name);
                       pokeHuntOff();
-                      client.channels.cache.get(announceChannel).send(roleMention+' Si '+name+' nanalo sa hunt!🎉🎉');
+                      client.channels.cache.get(announceChannel).send(roleMention+' Si **'+name+'** nanalo sa hunt!🎉🎉');
                       console.log('May nanalo na sa hunt');
                       /*
                       for (let i = 0; i < pokeServer.length; i++){

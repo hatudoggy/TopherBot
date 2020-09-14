@@ -112,7 +112,7 @@ client.on('message',message=>{
 
 //star react
 client.on('messageReactionAdd', message=>{
-    if(message.count==1 && message.emoji.name=='✨' && message.message.content.includes('found a wild')){
+    if(message.count==1 && message.emoji.name=='✨'){
         let color = message.message.embeds[0].color;
         console.log(color);
         if(color == '10487800' || color == '16751052'){
@@ -145,6 +145,7 @@ client.on('messageReactionAdd', message=>{
             }
 
         }
+
 
     }
     //console.log(message.count);
