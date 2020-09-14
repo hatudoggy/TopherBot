@@ -94,7 +94,7 @@ module.exports = {
 
       //hunt end
       pokeHuntOff = () =>{
-          client.off('messageUpdate',listener);
+          client.removeListener('messageUpdate',listener);
           console.log('hunt has ended');
           huntStart = false;
 
